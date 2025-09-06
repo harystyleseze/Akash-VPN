@@ -32,7 +32,7 @@ export default function Home() {
               No logs, no tracking, just pure privacy.
             </div>
             <div className="mt-4 text-sm text-primary-foreground/80 max-w-md mx-auto">
-              Click "Download Region 1 Config" to download the OpenVPN configuration file. 
+              Click &quot;Download Region 1 Config&quot; to download the OpenVPN configuration file. 
               Import it into your OpenVPN client to establish a secure connection. 
               For more instructions and a list of OpenVPN clients, visit our <Link href="/docs" className="underline hover:text-primary">documentation page</Link>.
             </div>
