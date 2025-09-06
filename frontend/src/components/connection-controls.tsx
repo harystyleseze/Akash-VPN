@@ -1,8 +1,6 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Shield, ShieldOff } from "lucide-react";
+import { Download } from "lucide-react";
 
 interface Server {
   region: string;
@@ -29,28 +27,17 @@ interface RegionsData {
 }
 
 export function ConnectionControls() {
-  const [isConnected, setIsConnected] = useState(false);
   const [regions, setRegions] = useState<RegionsData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetch('/data/akashic-records.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to load regions');
-        }
-        return response.json();
-      })
+      .then(response => response.json())
       .then(data => {
         setRegions(data);
         setLoading(false);
       })
-      .catch(error => {
-        console.error('Error loading regions:', error);
-        setError(error.message);
-        setLoading(false);
-      });
+      .catch(() => setLoading(false));
   }, []);
 
   const downloadConfig = (server: Server) => {
@@ -75,10 +62,9 @@ verb 3
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    setIsConnected(true);
   };
 
-  const handleConnect = () => {
+  const handleDownload = () => {
     if (regions?.regions?.[0]?.countries?.[0]?.servers?.[0]) {
       downloadConfig(regions.regions[0].countries[0].servers[0]);
     }
@@ -92,55 +78,16 @@ verb 3
     );
   }
 
-  if (error) {
-    return (
-      <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-        <div className="text-center text-red-500">Error: {error}</div>
-      </div>
-    );
-  }
-
   return (
-    <div className="flex flex-col gap-6 items-center justify-center">
-      <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-        <Button
-          onClick={handleConnect}
-          size="lg"
-          className={`px-8 py-3 text-lg font-semibold transition-all duration-300 ${
-            isConnected 
-              ? 'bg-green-500 hover:bg-green-600 text-white' 
-              : 'bg-primary hover:bg-primary/90'
-          }`}
-        >
-          {isConnected ? (
-            <>
-              <Shield className="w-5 h-5 mr-2" />
-              Connected
-            </>
-          ) : (
-            <>
-              <Shield className="w-5 h-5 mr-2" />
-              Connect
-            </>
-          )}
-        </Button>
-
-        <Button
-          onClick={() => setIsConnected(false)}
-          variant="outline"
-          size="lg"
-          className="px-8 py-3 text-lg font-semibold"
-          disabled={!isConnected}
-        >
-          <ShieldOff className="w-5 h-5 mr-2" />
-          Disconnect
-        </Button>
-      </div>
-
-      <div className="text-sm text-muted-foreground text-center max-w-md">
-        Click Connect to download the OpenVPN configuration file. 
-        Import it into your OpenVPN client to establish a secure connection.
-      </div>
+    <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+      <Button
+        onClick={handleDownload}
+        size="lg"
+        className="px-8 py-3 text-lg font-semibold bg-primary hover:bg-primary/90"
+      >
+        <Download className="w-5 h-5 mr-2" />
+        Download Region 1 Config
+      </Button>
     </div>
   );
 }
