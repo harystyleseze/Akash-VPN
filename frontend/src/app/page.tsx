@@ -3,6 +3,7 @@ import { EarthGlobe } from "@/components/earth-globe";
 import { ConnectionControls } from "@/components/connection-controls";
 import { BenefitsSection } from "@/components/benefits-section";
 import { MobileNav } from "@/components/mobile-nav";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -29,6 +30,11 @@ export default function Home() {
             <div className="mt-6 text-sm text-muted-foreground max-w-md mx-auto">
               Secure, fast, and private VPN powered by decentralized infrastructure. 
               No logs, no tracking, just pure privacy.
+            </div>
+            <div className="mt-4 text-sm text-primary-foreground/80 max-w-md mx-auto">
+              Click "Download Region 1 Config" to download the OpenVPN configuration file. 
+              Import it into your OpenVPN client to establish a secure connection. 
+              For more instructions and a list of OpenVPN clients, visit our <Link href="/docs" className="underline hover:text-primary">documentation page</Link>.
             </div>
           </div>
         </section>
