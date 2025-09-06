@@ -13,7 +13,7 @@ To get started with Akash VPN, follow these steps:
 
 1. Deploy the SoftEther VPN SDL to Akash using the deployment file located at `vpn/deploy.yml`.
 2. Once deployed, obtain the lease URL and update the `akashic-records.json` file in `frontend/public/data` with the new hostname.
-3. Build your docker image ```cd frontend & docker build -t dockeruser/tage:version .```
+3. Build your docker image ```cd frontend & docker build -t dockeruser/tag:version .```
 4. Push the image to Docker Hub or other image repository and use that image in following step.
 5. Deploy the frontend SDL using the deployment file located at `frontend/deploy.yml`.
 6. Visit the frontend URL and download the OpenVPN configuration file by clicking the "Download Region 1 Config" button.
