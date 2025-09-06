@@ -19,7 +19,7 @@ To get started with Akash VPN, follow these steps:
 6. Visit the frontend URL and download the OpenVPN configuration file by clicking the "Download Region 1 Config" button.
 7. Import the configuration file into your OpenVPN client and connect to the VPN.
 
-For more information on OpenVPN clients and setup instructions, visit our [documentation page](https://github.com/rodri-r/Akash-VPN/blob/r1/frontend/src/app/docs/page.tsx).
+For more information on OpenVPN clients and setup instructions, visit our [documentation page](/frontend/src/app/docs/page.tsx).
 
 ## 🏗️ Project Architecture
 
