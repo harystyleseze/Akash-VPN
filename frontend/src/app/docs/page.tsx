@@ -36,8 +36,8 @@ export default function Docs() {
         <ul className="list-disc list-inside mb-4">
           <li><Link href="https://openvpn.net/community-downloads/" className="underline hover:text-primary">OpenVPN Connect (Official)</Link></li>
           <li><Link href="https://tunnelblick.net/" className="underline hover:text-primary">Tunnelblick (for macOS)</Link></li>
-          <li><Link href="https://openvpn.net/vpn-server-resources/openvpn-connect/openvpn-connect-android/" className="underline hover:text-primary">OpenVPN Connect (for Android)</Link></li>
-          <li><Link href="https://openvpn.net/vpn-server-resources/openvpn-connect/openvpn-connect-ios/" className="underline hover:text-primary">OpenVPN Connect (for iOS)</Link></li>
+          <li><Link href="https://openvpn.net/connect-docs/android-installation-guide.html" className="underline hover:text-primary">OpenVPN Connect (for Android)</Link></li>
+          <li><Link href="https://openvpn.net/connect-docs/ios-installation-guide.html" className="underline hover:text-primary">OpenVPN Connect (for iOS)</Link></li>
         </ul>
       </main>
     </div>
