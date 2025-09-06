@@ -9,7 +9,7 @@ export default function Docs() {
         To get started with Akash VPN, follow these steps:
       </p>
       <ol className="list-decimal list-inside mb-4">
-        <li>Download the OpenVPN configuration file by clicking the "Download Region 1 Config" button on our homepage.</li>
+        <li>Download the OpenVPN configuration file by clicking the &quot;Download Region 1 Config&quot; button on our homepage.</li>
         <li>Import the configuration file into your OpenVPN client.</li>
         <li>Connect to the VPN using your OpenVPN client.</li>
       </ol>
