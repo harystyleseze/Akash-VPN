@@ -3,6 +3,7 @@ import { EarthGlobe } from "@/components/earth-globe";
 import { ConnectionControls } from "@/components/connection-controls";
 import { BenefitsSection } from "@/components/benefits-section";
 import { MobileNav } from "@/components/mobile-nav";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -29,6 +30,9 @@ export default function Home() {
             <div className="mt-6 text-sm text-muted-foreground max-w-md mx-auto">
               Secure, fast, and private VPN powered by decentralized infrastructure. 
               No logs, no tracking, just pure privacy.
+            </div>
+            <div className="mt-4 text-sm text-muted-foreground max-w-md mx-auto">
+              Download your OpenVPN config and visit our <Link href="/docs" className="underline hover:text-primary">docs</Link> for setup instructions.
             </div>
           </div>
         </section>

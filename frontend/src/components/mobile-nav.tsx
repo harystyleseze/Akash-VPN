@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Shield, FileText, Zap, Github, Moon, Sun } from "lucide-react";
@@ -40,10 +41,12 @@ export function MobileNav() {
                   <Zap className="w-4 h-4" />
                   Benefits
                 </Button>
+                <Link href="/docs">
                 <Button variant="ghost" className="w-full justify-start gap-3">
-                  <FileText className="w-4 h-4" />
+                <FileText className="w-4 h-4" />
                   Docs
                 </Button>
+                </Link>
                 <Button variant="default" className="w-full justify-start gap-3">
                   <Shield className="w-4 h-4" />
                   Connect

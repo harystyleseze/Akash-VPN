@@ -7,23 +7,34 @@
 
 A comprehensive, decentralized VPN solution built on the Akash Network. Akash VPN provides secure, private internet access without centralized control, leveraging the power of decentralized cloud infrastructure.
 
----
+## Getting Started
+
+To get started with Akash VPN, follow these steps:
+
+1. Deploy the SoftEther VPN SDL to Akash using the deployment file located at `vpn/deploy.yml`.
+2. Once deployed, obtain the lease URL and update the `akashic-records.json` file in `frontend/public/data` with the new hostname.
+3. Build your docker image ```cd frontend & docker build -t dockeruser/tag:version .```
+4. Push the image to Docker Hub or other image repository and use that image in following step.
+5. Deploy the frontend SDL using the deployment file located at `frontend/deploy.yml`.
+6. Visit the frontend URL and download the OpenVPN configuration file by clicking the "Download Region 1 Config" button.
+7. Import the configuration file into your OpenVPN client and connect to the VPN.
+
+For more information on OpenVPN clients and setup instructions, visit our [documentation page](/frontend/src/app/docs/page.tsx).
 
 ## 🏗️ Project Architecture
 
-This repository contains four core components that together form the Akash VPN ecosystem:
+This repository contains three core components that together form the Akash VPN ecosystem:
 
-### 📚 [Documentation](/akash-vpn-docs/)
-Comprehensive guides, setup instructions, and technical documentation built with Docusaurus.
+### 📚 [Documentation](/docs/)
+Comprehensive guides and setup instructions.
 
 ### 🖥️ [Web Frontend](/frontend/)
 Modern React/Next.js user interface featuring a stunning 3D globe visualization and intuitive VPN controls.
 
 ### 🔒 [VPN Server](/vpn/)
-SoftEther VPN server implementation providing multi-protocol support (OpenVPN, L2TP/IPsec, SSL-VPN).
+SoftEther VPN server implementation providing multi-protocol support (OpenVPN).
 
-### ⚡ [API Server](/server/)
-Backend service handling user authentication, server management, and VPN configuration.
+### ⚡ API Server (To be Developed)
+Backend service handling user authentication, server management, and VPN configuration (planned for future development).
 
 ---
-

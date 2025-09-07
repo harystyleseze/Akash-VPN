@@ -2,7 +2,7 @@ version: 2.0
 
 services:
   frontend:
-    image: rodrirr/akashvpn-frontend:latest
+    image: rodrirr/akashvpn-frontend:0.1.3
     expose:
       - port: 3000
         as: 80

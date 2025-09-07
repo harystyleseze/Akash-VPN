@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, Shield, FileText, Zap, Github } from "lucide-react";
 import { useTheme } from "@/components/theme-provider";
@@ -33,9 +34,11 @@ export function Sidebar() {
           <Zap className="w-4 h-4" />
           Benefits
         </Button>
-        <Button variant="ghost" className="w-full justify-start gap-3">
+        <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+          <Link href="/docs">
           <FileText className="w-4 h-4" />
           Docs
+          </Link>
         </Button>
         <Button variant="default" className="w-full justify-start gap-3">
           <Shield className="w-4 h-4" />

@@ -1,0 +1,23 @@
+{
+  "regions": [
+    {
+      "continent": "Global",
+      "continent_code": "GL",
+      "countries": [
+        {
+          "country": "Akash Network",
+          "country_code": "AKASH",
+          "flag": "🌐",
+          "servers": [
+            {
+              "region": "Default Server",
+              "hostname": "YOUR_VPN_IP_HERE",
+              "external_port": 1194,
+              "hub_name": "AKASH_HUB"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
